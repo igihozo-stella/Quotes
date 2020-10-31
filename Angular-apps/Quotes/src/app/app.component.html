@@ -1,5 +1,9 @@
 
 <div>
   <h1>Worldwide Common Quotes</h1>
-  <p>The quote of the day is {{quote}}</p>
+  <ul>
+    <li *ngFor='let quote of quotes'>
+      {{quote}}
+    </li>
+  </ul>
 </div>
