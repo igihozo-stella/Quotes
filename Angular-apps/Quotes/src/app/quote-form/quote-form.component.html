@@ -12,7 +12,14 @@
                 <p>Quote is required</p>
            </div>
         </div>
-        
+        <div class="form-group">
+  
+            <label for="publisher"><strong>Publisher</strong></label>
+            <input type="text"  class="form-control" id="publisher" [(ngModel)]="newQuote.publisher" name="publisher" #publisher='ngModel' required>
+            <div [hidden]="publisher.valid || publisher.pristine" class="alert alert-danger">
+                <p>Publisher is required</p>
+           </div>
+        </div>
         <div class="form-group">
   
             <label for="author"><strong>Quote Author:</strong></label>
@@ -21,6 +28,7 @@
                 <p>Author is required</p>
            </div>
         </div>
+       
         <div class="form-group">
             <label for="publish"><strong>Publish Date:</strong></label>
             <input type='date' id="publish" [(ngModel)]="newQuote.publishDate" name="publishDate" #publishDate='ngModel'required>
