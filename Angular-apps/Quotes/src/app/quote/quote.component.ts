@@ -18,7 +18,11 @@ export class QuoteComponent implements OnInit {
   toggleDetails (index){
     this.quotes[index].showDescription=!this.quotes[index].showDescription;
   }
-  
+  deleteQuote(isDelete, index){
+    if (isDelete) {
+      this.quotes.splice(index,1);
+    }
+  }
   addNewQuote(quote){
     let quoteLength = this.quotes.length;
     quote.id = quoteLength+1;

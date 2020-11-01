@@ -30,7 +30,7 @@
        <div *ngFor='let quote of quotes;let i = index'>
           <li>{{quote.name}} <br>Published by <strong>{{quote.publisher}}</strong></li>
           <button (click)='toggleDetails(i)' class="btn btn-secondary">Details</button>
-          <app-quote-detail *ngIf='quote.showDescription' [quote]='quote'></app-quote-detail>
+          <app-quote-detail *ngIf='quote.showDescription' [quote]='quote'(isDelete) = 'deleteQuote($event,i)'></app-quote-detail>
           <button (click)='upVotes' class="btn btn-secondary"><a href="">Like</a></button>
           <button (click)='upVotes' class="btn btn-secondary"><a href="">Dislike</a></button>
        </div>
