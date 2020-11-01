@@ -1,3 +1,15 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    button{
+    margin-left: 10px;
+    padding: 10px, 5px;
+    box-shadow: thistle;
+    background-color: black;
+    color:white;
+   }
+</style>
 <p>{{quote.author}}</p>
 <p>This quote was published {{quote.publishDate|dayCount}} days ago</p>
+<button (click)='voteUp()'><i class="fa fa-thumbs-up" aria-hidden="true"></i>{{upvote}}</button>
+<button (click)='voteDown()'><i class="fa fa-thumbs-down" aria-hidden="true"></i>{{downvote}}</button>
 <button (click)= 'quoteDelete(true)'>Delete</button>
